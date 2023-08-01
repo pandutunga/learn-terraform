@@ -35,14 +35,14 @@ variable "course" {
 ## List
 variable "courses" {
   default = [
-  "Devops"
-  "AWS"
+  "Devops",
+  "AWS",
   "Python"
   ]
 }
 
 ## MAp
-varibale "course_details" {
+variable "course_details" {
  default = {
    Devops = {
      name = "DevOps"
