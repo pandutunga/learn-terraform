@@ -3,7 +3,7 @@ variable "class" {
 }
 
 output "class" {
-  value1 = var.class
+  #value1 = var.class
   value = upper(var.class)
 }
 
@@ -12,7 +12,7 @@ variable "fruits" {
 }
 
 output "fruit_count" {
-  value1 = var.fruits
+  #value1 = var.fruits
   value = length(var.fruits)
 }
 
@@ -33,14 +33,14 @@ output "devops_topics" {
 }
 
 output "aws_topics" {
-  value = var.classes["aws"]["topics"]
-  value1 = lookup(var.classes, "aws", null)
-  value2 = lookup(lookup(var.classes, "aws", null), "topics", "no topics so far")
+  #value = var.classes["aws"]["topics"]
+  #value1 = lookup(var.classes, "aws", null)
+  value = lookup(lookup(var.classes, "aws", null), "topics", "no topics so far")
 }
 
 output "fruit_0" {
-  value = var.fruits
-  value1 = var.fruits[0]
-  value2 = var.fruits[4]
-  value3 = element(var.fruits, 4)
+ # value = var.fruits
+  #value1 = var.fruits[0]
+  #value2 = var.fruits[4]
+  value = element(var.fruits, 4)
 }
