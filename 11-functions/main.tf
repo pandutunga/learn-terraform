@@ -38,9 +38,17 @@ output "aws_topics" {
   value = lookup(lookup(var.classes, "aws", null), "topics", "no topics so far")
 }
 
-output "fruit_0" {
+output "fruit_4" {
  # value = var.fruits
   #value1 = var.fruits[0]
   #value2 = var.fruits[4]
   value = element(var.fruits, 4)
+}
+
+variable "a" {
+  default = 100
+}
+
+output "a" {
+  value = var.a > 100 ? "surplus quantity" : "less quantity"
 }
